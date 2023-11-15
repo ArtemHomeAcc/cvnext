@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+}
+
+.home {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts :first-child {
+  margin-left: 0;
+}
+
+.language {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.language :first-child {
+  margin-left: 0;
+}
+
+.item {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.item button {
+  border: 0;
+  background: #ecd5f5;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 575px) {
+  .item {
+    width: 24px;
+    margin-left: 8px;
+  }
+}

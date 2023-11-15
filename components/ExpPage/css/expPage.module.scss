@@ -1,0 +1,332 @@
+.main__info__wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.main__info__ava {
+  width: 30vw;
+}
+
+.main__info__ava_img {
+  display: block;
+  width: 40%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.main__info__descr {
+  font-size: 18px;
+  width: 33vw;
+}
+
+.main__info__headers__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2%;
+  padding-right: 20%;
+  margin-top: 50px;
+}
+
+.job__section__titles,
+.study__section__titles {
+  width: 30%;
+}
+
+.job__section__possition_descr,
+.study__section__descr {
+  margin-top: 45px;
+  width: 45%;
+  padding: 0 50px;
+  font-size: 18px;
+  h2 {
+    font-size: 19px;
+    font-weight: 700;
+  }
+}
+
+.job__section__achiev,
+.study__section__achiev {
+  margin-top: 45px;
+  width: 45%;
+  padding: 0 40px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+span.grey {
+  color: grey;
+}
+
+.job__section__titles .accordion_heading span,
+.study__section__titles .accordion_heading span {
+  border-bottom: 2px dotted #333;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.active_style span {
+  color: #17bbdb;
+  font-weight: 700;
+  text-decoration: none;
+  border: 0;
+}
+
+.accordion_block__item {
+  font-size: 22px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.accordion_block_content {
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+}
+
+.accordion_block_content__active {
+  overflow: visible;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+.nextPage {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  height: 75px;
+  margin-top: 100px;
+  div {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main__info__ava_img {
+    width: 50%;
+  }
+
+  .main__info__descr {
+    font-size: 17px;
+  }
+
+  .job__section__titles,
+  .study__section__titles {
+    width: 30%;
+  }
+
+  .job__section__possition_descr,
+  .study__section__descr {
+    padding: 0 20px;
+    font-size: 17px;
+    h2 {
+      font-size: 17px;
+    }
+  }
+
+  .job__section__achiev,
+  .study__section__achiev {
+    font-size: 17px;
+  }
+
+  .job__section__titles .accordion_heading span,
+  .study__section__titles .accordion_heading span {
+    font-size: 20px;
+  }
+
+  .accordion_block__item {
+    font-size: 18px;
+  }
+
+  .nextPage {
+    width: 240px;
+  }
+}
+
+@media (max-width: 991px) {
+  .main__info__ava_img {
+    width: 55%;
+  }
+
+  .main__info__descr {
+    width: 50vw;
+    font-size: 16px;
+  }
+
+  .main__info__headers__wrapper {
+    padding-right: 6%;
+    margin-top: 40px;
+  }
+
+  .job__section__titles,
+  .study__section__titles {
+    width: 28%;
+  }
+
+  .job__section__possition_descr,
+  .study__section__descr {
+    margin-top: 40px;
+    width: 50%;
+    padding: 0 10px;
+    font-size: 16px;
+    h2 {
+      font-size: 16px;
+    }
+  }
+
+  .job__section__achiev,
+  .study__section__achiev {
+    margin-top: 40px;
+    width: 25%;
+    padding: 0;
+    font-size: 16px;
+  }
+
+  .job__section__titles .accordion_heading span,
+  .study__section__titles .accordion_heading span {
+    font-size: 18px;
+  }
+
+  .accordion_block__item {
+    font-size: 17px;
+  }
+
+  .nextPage {
+    width: 225px;
+    height: 85px;
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .main__info__ava {
+    width: 30vw;
+  }
+
+  .main__info__ava_img {
+    width: 70%;
+  }
+
+  .main__info__descr {
+    width: 50vw;
+    font-size: 14px;
+  }
+
+  .main__info__headers__wrapper {
+    font-size: 12px;
+    margin-top: 30px;
+  }
+
+  .job__section__titles,
+  .study__section__titles {
+    width: 30%;
+  }
+
+  .job__section__possition_descr,
+  .study__section__descr {
+    margin-top: 35px;
+    width: 45%;
+    padding: 0 5px;
+    font-size: 13px;
+    h2 {
+      font-size: 15px;
+    }
+  }
+
+  .job__section__achiev,
+  .study__section__achiev {
+    margin-top: 35px;
+    width: 25%;
+    font-size: 13px;
+  }
+
+  .job__section__titles .accordion_heading span,
+  .study__section__titles .accordion_heading span {
+    font-size: 16px;
+  }
+
+  .accordion_block__item {
+    font-size: 15px;
+  }
+
+  .nextPage {
+    width: 200px;
+    height: 69px;
+    margin-top: 75px;
+    div {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .main__info__wrapper {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .main__info__ava {
+    width: 80vw;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .main__info__ava_img {
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .main__info__descr {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .main__info__headers__wrapper {
+    display: none;
+  }
+
+  .job__section__titles,
+  .study__section__titles {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .job__section__possition_descr,
+  .study__section__descr {
+    margin-top: 35px;
+    width: 100%;
+    padding: 0;
+    h2 {
+      font-size: 13px;
+    }
+  }
+
+  .job__section__achiev,
+  .study__section__achiev {
+    margin-top: 35px;
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .job__section__titles .accordion_heading span,
+  .study__section__titles .accordion_heading span {
+    font-size: 17px;
+  }
+
+  .accordion_block__item {
+    font-size: 17px;
+  }
+
+  .nextPage {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 150px;
+    height: 70px;
+    div {
+      font-size: 13px;
+    }
+  }
+}

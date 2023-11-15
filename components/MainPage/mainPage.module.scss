@@ -1,0 +1,287 @@
+@import './mixin';
+
+.mainBtns {
+  margin-top: 27vh;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  :first-child {
+    margin-left: 0;
+  }
+}
+
+.btn {
+  width: 20%;
+  height: 40%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 30px;
+  background-color: #b4e2ff;
+  cursor: pointer;
+  @include btn_hover;
+  div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.22);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+    line-height: 25px;
+    text-transform: uppercase;
+    outline: none;
+  }
+}
+
+.afterBtn {
+  margin-left: 20px;
+}
+
+.approach__dots div:hover {
+  background-color: #fff;
+}
+
+.approach {
+  margin-top: 80px;
+  width: 35%;
+  color: #000000d0;
+  &__dots {
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    div {
+      width: 15px;
+      height: 15px;
+      margin-left: 10px;
+      background-color: #000000d0;
+      border-radius: 100%;
+      border: 1px solid #000000d0;
+      cursor: pointer;
+    }
+    :first-child {
+      margin-left: 0;
+    }
+    &_active {
+      background-color: #fff;
+    }
+  }
+  &__wrapper {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 2%;
+  }
+  &__header {
+    text-align: center;
+    padding: 1% 10%;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  &__info > * {
+    font-size: 18px;
+    line-height: 150%;
+    display: flex;
+    justify-content: space-between;
+    :nth-child(1) {
+      text-decoration: underline;
+    }
+    :nth-child(2) {
+      text-align: right;
+    }
+  }
+  &__info {
+    &_features {
+      height: 55px;
+    }
+  }
+}
+
+.approach__dots_active {
+  background-color: #fff !important;
+}
+
+@media (max-width: 1440px) {
+  .approach {
+    margin-top: 80px;
+    width: 40%;
+    &__info > * {
+      line-height: 140%;
+    }
+    &__info {
+      &_features {
+        height: 70px;
+        :nth-child(2) {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .btn {
+    width: 30%;
+    height: 38%;
+    div {
+      font-size: 22px;
+      line-height: 25px;
+    }
+  }
+
+  .afterBtn {
+    margin-left: 20px;
+  }
+  .approach {
+    margin-top: 0;
+    width: 40%;
+    &__header {
+      padding: 1% 7%;
+      font-size: 19px;
+    }
+    &__info > * {
+      font-size: 17px;
+      line-height: 130%;
+      display: flex;
+      justify-content: space-between;
+      :nth-child(1) {
+        text-decoration: underline;
+      }
+      :nth-child(2) {
+        text-align: right;
+      }
+    }
+    &__info {
+      &_features {
+        height: 60px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .mainBtns {
+    justify-content: space-around;
+  }
+
+  .btn {
+    width: 30%;
+    div {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+
+  .afterBtn {
+    margin-left: 0;
+  }
+  .approach {
+    margin-top: 0;
+    width: 50%;
+    &__header {
+      text-align: center;
+      padding: 1% 4%;
+      font-size: 18px;
+    }
+    &__info > * {
+      font-size: 16px;
+      line-height: 130%;
+    }
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .mainBtns {
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  .btn {
+    width: 45%;
+    height: 38%;
+    div {
+      font-size: 19px;
+      line-height: 20px;
+    }
+  }
+  .afterBtn {
+    margin-left: 0;
+  }
+
+  .approach {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 70%;
+    &__header {
+      padding: 1% 10%;
+      font-size: 16px;
+    }
+    &__info > * {
+      font-size: 14px;
+    }
+    &__info {
+      &_features {
+        height: 45px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .mainBtns {
+    margin-top: 20vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    :nth-child(2) {
+      margin-left: 0px;
+    }
+  }
+
+  .btn {
+    width: 60%;
+    height: 35%;
+    div {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  .approach {
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 90%;
+    &__header {
+      padding: 1% 8%;
+      font-size: 15px;
+    }
+    &__info > * {
+      font-size: 13.5px;
+    }
+    &__info {
+      &_features {
+        height: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 410px) {
+  .approach {
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 90%;
+    &__header {
+      padding: 1% 8%;
+      font-size: 15px;
+    }
+    &__info > * {
+      font-size: 13.5px;
+    }
+    &__info {
+      &_features {
+        height: 60px;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "MAIN": {
+    "PREVIOUS": "Work experience",
+    "AFTER": "Courses",
+    "THE": "The",
+    "H1PHRASE": "was developed using below methods:",
+    "LANGUAGE": "language:",
+    "LIBRARY": "library:",
+    "APPROACHES": "approaches:",
+    "MODULES": "MOdules:"
+  },
+  "ABOUT": {
+    "NAME": "Zakharchuk Artem",
+    "SEX": "male",
+    "AGE": "33 years",
+    "DATE_OF_BIRTH": "born on May 5, 1989",
+    "MARRIED": "married",
+    "CALL": "preferred communication method",
+    "RESIDENCE": "residence: Kyiv",
+    "CITIZENSHIP": "citizenship: Ukraine",
+    "INTERESTS": "At different ages I was interested in: football (I played semi-professional), table tennis, boxing, volleyball, rafting (particulary mountain)",
+    "COVER": "Discipline, attention to detail, a sense of the process, the extreme need to do everything correctly and immediately change processes in case of errors, absence of an expression 'I don't know' in the vocabulary - these are some of my characteristics I have developed working as a logistics specialist and which I believe are useful in a new role I chose. In the process of learning JS, I realized quite quickly that it`s not simple and there is a space to get dipper. I feel a constant interest in extending my knowledge, and therefore I hope to gain practical experience in a short period of time in order to become a strong developer.",
+    "EXPERIENCE_HEADER": "Experience",
+    "EXPERIENCE_DESCRIPTION": "Details",
+    "EXPERIENCE_ACHIEVEMENTS": "Achievements",
+    "JOB": "Work",
+    "EDUCATION": "Education",
+    "COURSES": "Courses",
+    "COURSE": "Course",
+    "PROJECT": "Project",
+    "PORTFOLIO": "Portfolio",
+    "COURSE_DESCR": "Course description",
+    "DESCR": "Description",
+    "LOADING_ERROR": "Loading error"
+  }
+}
