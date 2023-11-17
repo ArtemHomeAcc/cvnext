@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import usedApproaches from './usedApproaches';
-import classes from './MainPage.module.scss';
+import classes from './mainPage.module.scss';
 import { useRouter } from 'next/router';
 
 const MainPage = () => {
