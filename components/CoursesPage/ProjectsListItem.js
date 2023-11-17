@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { activeProject } from './../projectList/projectSlice';
+import { activeProject } from '../../store/slice/ProjectSlice';
 import Image from 'next/image';
-import classes from '../css/coursesPage.module.scss';
+import classes from './css/coursesPage.module.scss';
 
 const ProjectsListItem = ({ _id, image, name }) => {
   const { activeFilter } = useSelector((state) => state.filters);

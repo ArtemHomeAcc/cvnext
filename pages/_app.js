@@ -1,19 +1,18 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { Provider } from 'react-redux';
-import store from '../store/index';
+// import { Provider } from 'react-redux';
+import { wrapper } from '../store';
+// import { store } from '../store/index';
 import Layout from '../components/layout/layout';
 import '@/styles/globals.scss';
 
 function App({ Component, pageProps }) {
   return (
     <NextIntlClientProvider messages={pageProps.messages}>
-      <Provider store={store}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </Provider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </NextIntlClientProvider>
   );
 }
 
-export default App;
+export default wrapper.withRedux(App, { debug: true });

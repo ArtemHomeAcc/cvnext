@@ -1,17 +1,11 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { createSelector } from '@reduxjs/toolkit';
-import { useTranslations } from 'next-intl';
 
-import { fetchProjects } from './projectSlice';
-import ProjectsListItem from '../projectsListItem/ProjectsListItem';
-import Spinner from '../../spinner/Spinner';
+import ProjectsListItem from './ProjectsListItem';
 
-import classes from '../css/coursesPage.module.scss';
+import classes from './css/coursesPage.module.scss';
 
 const ProjectList = () => {
-  const t = useTranslations('ABOUT');
-
   const filteredProjectSelector = createSelector(
     (state) => state.filters.activeFilter,
     (state) => state.projects.projects,
@@ -23,30 +17,15 @@ const ProjectList = () => {
       }
     }
   );
-  const filtredProjects = useSelector(filteredProjectSelector);
-  const projectsLoadingStatus = useSelector((state) => state.projects.projectsLoadingStatus);
+  const filteredPR = useSelector(filteredProjectSelector);
   const { activeFilter } = useSelector((state) => state.filters);
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchProjects());
-
-    // eslint-disable-next-line
-  }, []);
-
-  if (projectsLoadingStatus === 'loading') {
-    return <Spinner />;
-  } else if (projectsLoadingStatus === 'error') {
-    return <h5>{t('LOADING_ERROR')}</h5>;
-  }
 
   const renderProjectList = (arr) => {
     return arr.map(({ _id, ...props }) => {
       return <ProjectsListItem key={_id} {...props} />;
     });
   };
-  const elements = renderProjectList(filtredProjects);
+  const elements = renderProjectList(filteredPR);
 
   return (
     <div className={classes.courses__section__projects}>

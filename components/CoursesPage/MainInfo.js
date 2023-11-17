@@ -1,8 +1,8 @@
+import { Fragment } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import newAva from './img/photoAfter_final.jpg';
 import classes from './css/coursesPage.module.scss';
-import { Fragment } from 'react';
-import Image from 'next/image';
 
 const MainInfo = () => {
   const t = useTranslations('ABOUT');

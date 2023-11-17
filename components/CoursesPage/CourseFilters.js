@@ -1,18 +1,12 @@
-import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { activeFilterChanged, filtersFetch } from './CourseFilterSlice';
+import { activeFilterChanged } from '../../store/slice/CourseFilterSlice';
 
-import classes from '../css/coursesPage.module.scss';
+import classes from './css/coursesPage.module.scss';
 
 const CourseFilters = () => {
   const { filters, activeFilter } = useSelector((state) => state.filters);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(filtersFetch());
-    // eslint-disable-next-line
-  }, []);
 
   const renderFilters = (arr) => {
     return arr.map(({ _id, name }) => {
