@@ -122,20 +122,6 @@
   border: 0;
 }
 
-.courses__section__projects_description {
-  margin-top: 10px;
-  width: 25%;
-  font-size: 16px;
-  font-weight: 500;
-  span {
-    font-size: 18px;
-    font-weight: 700;
-  }
-  :first-child {
-    margin-bottom: 30px;
-  }
-}
-
 .courses__item_selected {
   box-shadow: 0 5px 20px #17bbdb;
   transform: translateY(-8px);
@@ -207,19 +193,6 @@
     font-size: 16px;
   }
 
-  .courses__section__projects_description {
-    margin-top: 30px;
-    padding-left: 20px;
-    width: 35%;
-    font-size: 15px;
-    span {
-      font-size: 16px;
-    }
-    :first-child {
-      margin-bottom: 20px;
-    }
-  }
-
   .courses__item_selected {
     box-shadow: 0 5px 10px #17bbdb;
   }
@@ -286,17 +259,6 @@
     font-size: 16px;
     padding-left: 10px;
   }
-  .courses__section__projects_description {
-    width: 45%;
-    padding-left: 5px;
-    font-size: 14px;
-    span {
-      font-size: 15px;
-    }
-    :first-child {
-      margin-bottom: 20px;
-    }
-  }
 }
 @media (max-width: 575px) {
   .skeleton {
@@ -360,18 +322,5 @@
     font-size: 15px;
     line-height: 12px;
     padding-left: 7px;
-  }
-  .courses__section__projects_description {
-    margin-top: 30px;
-    width: 100%;
-    padding-left: 0;
-    line-height: 14px;
-    font-size: 13px;
-    span {
-      font-size: 15px;
-    }
-    :first-child {
-      margin-bottom: 15px;
-    }
   }
 }
