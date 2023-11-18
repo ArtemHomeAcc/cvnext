@@ -1,9 +1,9 @@
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import usedApproaches from './usedApproaches';
-import classes from './MainPage.module.scss';
+import classes from './mainPage.module.scss';
 import { useRouter } from 'next/router';
+import Button from '../Button/Button';
 
 const MainPage = () => {
   const t = useTranslations('MAIN');
@@ -120,13 +120,8 @@ const MainPage = () => {
   return (
     <>
       <section className={classes.mainBtns}>
-        <Link href="/exp" className={`${classes.btn} ${classes.beforeBtn}`}>
-          <div>{t('PREVIOUS')}</div>
-        </Link>
-
-        <Link href="/courses" className={`${classes.btn} ${classes.afterBtn}`}>
-          <div>{t('AFTER')}</div>
-        </Link>
+        <Button linkto="/exp" tN="PREVIOUS" />
+        <Button linkto="/courses" tN="AFTER" />
       </section>
       <section className={classes.approach}>
         {sliderDots(index)}
