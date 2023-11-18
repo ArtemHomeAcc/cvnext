@@ -8,12 +8,12 @@ const usedApproaches = [
       },
       uk: {
         language: 'uk',
-        info: 'Досвід роботи Сторінка',
+        info: 'Сторінка Досвіду роботи ',
       },
     },
     language: 'JS, Sass',
-    library: 'React',
-    features: 'react-i18next',
+    library: 'Next.js',
+    features: 'next-intl',
     approaches: 'hook, property drill',
   },
   {
@@ -29,8 +29,8 @@ const usedApproaches = [
       },
     },
     language: 'JS, Sass',
-    library: 'React',
-    features: 'react-router-dom, react-i18next',
+    library: 'Next.js',
+    features: 'next-intl',
     approaches: 'this page will be extended',
   },
   {
@@ -46,9 +46,9 @@ const usedApproaches = [
       },
     },
     language: 'JS, Sass',
-    library: 'React',
-    features: 'express, mongoose, cors, morgan, react-i18next, react-redux, reduxjs/toolkit',
-    approaches: 'MVC, redux',
+    library: 'Next.js',
+    features: 'mongoose, next-intl, next-redux-wrapper, reduxjs/toolkit',
+    approaches: 'MVC, state container',
   },
 ];
 
