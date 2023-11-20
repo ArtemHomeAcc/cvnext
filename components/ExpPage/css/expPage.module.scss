@@ -1,13 +1,14 @@
 .main__info__wrapper {
   display: flex;
   justify-content: flex-start;
+  height: 300px;
 }
 
 .main__info__ava {
   width: 30vw;
   img {
-    width: 70%;
-    height: 70%;
+    width: 90%;
+    height: 90%;
   }
 }
 
@@ -24,28 +25,14 @@
   color: black;
 }
 
-.main__info__headers__wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 2%;
-  padding-right: 20%;
-  margin-top: 30px;
-  div {
-    font-size: 16px;
-    color: black;
-  }
-}
-
 .job__section__titles,
 .study__section__titles {
-  width: 30%;
+  width: 100%;
 }
 
 .job__section__possition_descr,
 .study__section__descr {
-  margin-top: 45px;
   width: 45%;
-  padding: 0 50px;
   font-size: 16px;
   h2 {
     font-size: 17px;
@@ -55,11 +42,16 @@
 
 .job__section__achiev,
 .study__section__achiev {
-  margin-top: 45px;
   width: 45%;
-  padding: 0 40px;
   font-size: 16px;
   font-weight: 500;
+}
+
+.study__section__descr {
+  margin-top: 40px;
+}
+.study__section__achiev {
+  margin-top: 40px;
 }
 
 span.grey {
@@ -99,42 +91,14 @@ span.grey {
   margin-top: 1rem;
 }
 
-@media (max-width: 1200px) {
-  .job__section__possition_descr,
-  .study__section__descr {
-    padding: 0 20px;
-  }
-
-  .job__section__achiev,
-  .study__section__achiev {
-    padding: 0 20px;
-  }
-}
-
 @media (max-width: 991px) {
   .main__info__descr {
     width: 50vw;
     font-size: 15px;
   }
 
-  .main__info__headers__wrapper {
-    padding-right: 6%;
-    margin-top: 40px;
-    div {
-      font-size: 15px;
-    }
-  }
-
-  .job__section__titles,
-  .study__section__titles {
-    width: 28%;
-  }
-
   .job__section__possition_descr,
   .study__section__descr {
-    margin-top: 40px;
-    width: 50%;
-    padding: 0 10px;
     font-size: 15px;
     h2 {
       font-size: 16px;
@@ -143,9 +107,6 @@ span.grey {
 
   .job__section__achiev,
   .study__section__achiev {
-    margin-top: 40px;
-    width: 25%;
-    padding: 0;
     font-size: 15px;
   }
 
@@ -169,23 +130,8 @@ span.grey {
     font-size: 14px;
   }
 
-  .main__info__headers__wrapper {
-    margin-top: 30px;
-    div {
-      font-size: 14px;
-    }
-  }
-
-  .job__section__titles,
-  .study__section__titles {
-    width: 30%;
-  }
-
   .job__section__possition_descr,
   .study__section__descr {
-    margin-top: 35px;
-    width: 45%;
-    padding: 0 5px;
     font-size: 13px;
     h2 {
       font-size: 14px;
@@ -194,8 +140,6 @@ span.grey {
 
   .job__section__achiev,
   .study__section__achiev {
-    margin-top: 35px;
-    width: 25%;
     font-size: 13px;
   }
 
@@ -213,6 +157,7 @@ span.grey {
   .main__info__wrapper {
     flex-direction: column;
     margin-bottom: 0;
+    height: fit-content;
   }
 
   .main__info__ava {
@@ -237,10 +182,6 @@ span.grey {
     font-size: 14px;
   }
 
-  .main__info__headers__wrapper {
-    display: none;
-  }
-
   .job__section__titles,
   .study__section__titles {
     width: 100%;
@@ -249,7 +190,6 @@ span.grey {
 
   .job__section__possition_descr,
   .study__section__descr {
-    margin-top: 35px;
     width: 100%;
     padding: 0;
     font-size: 14px;
@@ -261,7 +201,6 @@ span.grey {
 
   .job__section__achiev,
   .study__section__achiev {
-    margin-top: 35px;
     width: 100%;
     font-size: 14px;
   }

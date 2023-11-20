@@ -30,11 +30,6 @@ const MainInfo = () => {
           {t('COVER')}
         </div>
       </div>
-      <div className={classes.main__info__headers__wrapper}>
-        <div className={classes.expirience__track}>{t('COURSES')} </div>
-        <div className={classes.portfolio__track}>{t('PORTFOLIO')}</div>
-        <div className={classes.achievements__track}>{t('COURSE_DESCR')}</div>
-      </div>
     </Fragment>
   );
 };

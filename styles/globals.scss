@@ -63,3 +63,17 @@ p {
     color-scheme: dark;
   }
 }
+
+@media (max-width: 1200px) {
+  #__next {
+    width: 90vw;
+    padding: 20px 0 20px 0;
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  #__next {
+    width: 95vw;
+    padding: 10px 0 10px 0;
+  }
+}

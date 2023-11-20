@@ -1,17 +1,22 @@
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 import MainInfo from '../../components/ExpPage/MainInfo';
 import Button from '../../components/Button/Button';
 import Companies from '../../components/ExpPage/CompaniesList';
 import Description from '@/components/ExpPage/Description';
+import Achievments from '@/components/ExpPage/Achievments';
 import Education from '@/components/ExpPage/Education';
 import DescrEducation from '@/components/ExpPage/DescrEducation';
+import EducationAchievements from '@/components/ExpPage/EducationAchievements';
 import DataForJob from '../../components/ExpPage/data/DataForJob';
 import DataForStudy from '../../components/ExpPage/data/DataForStudy';
 
 import classes from './exp.module.scss';
 
 function ExpPage() {
+  const t = useTranslations('ABOUT');
+
   const { jobInfo, onToggleRise } = DataForJob();
   const { studyInfo, onToggleRiseStudy } = DataForStudy();
   const [activeList, setActiveList] = useState(false);
@@ -34,25 +39,57 @@ function ExpPage() {
     <div>
       <MainInfo />
       <div className={classes.job__section__wrapper}>
-        <Companies
-          jobInfo={jobInfo}
-          onToggleRise={onToggleRise}
-          active={activeList}
-          onActive={onActive}
-        />
-        <div className={classes.skeleton} style={skeletonShow}></div>
-        <Description jobInfo={jobInfo} active={activeList} />
+        <div className={classes.experience}>
+          <div className={classes.experience__track}>{t('EXPERIENCE_HEADER')}</div>
+          <Companies
+            jobInfo={jobInfo}
+            onToggleRise={onToggleRise}
+            active={activeList}
+            onActive={onActive}
+          />
+        </div>
+        <div className={classes.description}>
+          <div className={classes.description__position}>
+            <div className={classes.description__track}>{t('EXPERIENCE_DESCRIPTION')}</div>
+            <div className={classes.skeleton} style={skeletonShow}></div>
+            <Description jobInfo={jobInfo} active={activeList} />
+          </div>
+          <div className={classes.description__achievements}>
+            <div className={classes.description__achievements__track}>
+              {t('EXPERIENCE_ACHIEVEMENTS')}
+            </div>
+            <div className={classes.skeleton} style={skeletonShow}></div>
+            <Achievments jobInfo={jobInfo} active={activeList} />
+          </div>
+        </div>
       </div>
 
       <div className={classes.study__section__wrapper}>
-        <Education
-          studyInfo={studyInfo}
-          onToggleRiseStudy={onToggleRiseStudy}
-          active={activeStudyList}
-          onActiveStudy={onActiveStudy}
-        />
-        <div className={classes.skeleton} style={skeletonShowStudy}></div>
-        <DescrEducation studyInfo={studyInfo} active={activeStudyList} />
+        <div className={classes.experience}>
+          <Education
+            studyInfo={studyInfo}
+            onToggleRiseStudy={onToggleRiseStudy}
+            active={activeStudyList}
+            onActiveStudy={onActiveStudy}
+          />
+        </div>
+        <div className={`${classes.description} ${classes.study}`}>
+          <div className={classes.description__position}>
+            <div className={classes.education__achievements__track}>
+              {t('EXPERIENCE_DESCRIPTION')}
+            </div>
+
+            <div className={`${classes.study__skeleton}`} style={skeletonShowStudy}></div>
+            <DescrEducation studyInfo={studyInfo} active={activeStudyList} />
+          </div>
+          <div className={classes.description__achievements}>
+            <div className={classes.education__achievements__track}>
+              {t('EXPERIENCE_ACHIEVEMENTS')}
+            </div>
+            <div className={`${classes.study__skeleton}`} style={skeletonShowStudy}></div>
+            <EducationAchievements studyInfo={studyInfo} active={activeStudyList} />
+          </div>
+        </div>
       </div>
       <Button linkto="/courses" tN="AFTER" />
     </div>

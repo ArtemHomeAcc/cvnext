@@ -1,86 +1,137 @@
-.courses__section__wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-}
-
-.courses__section__projects_description {
-  margin-top: 10px;
-  width: 25%;
-  font-size: 16px;
-  font-weight: 500;
-  span {
-    font-size: 17px;
-    font-weight: 700;
+.courses {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
   }
-  :first-child {
-    margin-bottom: 30px;
+  &__list {
+    width: 20%;
+    &__track {
+      color: grey;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  &__projects_wrapper {
+    width: 55%;
+    padding: 0 20px;
+    &__track {
+      color: grey;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  &__projects_description {
+    width: 25%;
+    font-size: 16px;
+    font-weight: 500;
+    &__track {
+      color: grey;
+      text-align: center;
+    }
+    span {
+      font-size: 17px;
+      font-weight: 700;
+    }
+    :first-child {
+      margin-bottom: 30px;
+    }
   }
 }
 
 @media (max-width: 1200px) {
-  .courses__section__wrapper {
-    margin-top: 10px;
-  }
-  .courses__section__projects_description {
-    font-size: 16px;
-    span {
-      font-size: 18px;
+  .courses {
+    &__wrapper {
+      margin-top: 10px;
+    }
+    &__projects_description {
+      font-size: 16px;
+      span {
+        font-size: 18px;
+      }
     }
   }
 }
 
 @media (max-width: 991px) {
-  .courses__section__wrapper {
-    margin-top: 0;
-  }
-  .courses__section__projects_description {
-    margin-top: 30px;
-    padding-left: 20px;
-    width: 35%;
-    font-size: 15px;
-    span {
-      font-size: 16px;
+  .courses {
+    &__wrapper {
+      margin-top: 0;
     }
-    :first-child {
-      margin-bottom: 20px;
+    &__projects_description {
+      padding-left: 20px;
+      width: 35%;
+      font-size: 15px;
+      &__track {
+        font-size: 14px;
+      }
+      span {
+        font-size: 16px;
+      }
+    }
+    &__list {
+      &__track {
+        font-size: 14px;
+      }
+    }
+    &__projects_wrapper {
+      &__track {
+        font-size: 14px;
+      }
     }
   }
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
-  .courses__section__wrapper {
-    margin-top: 10px;
-  }
-  .courses__section__projects_description {
-    width: 45%;
-    padding-left: 5px;
-    font-size: 14px;
-    span {
-      font-size: 15px;
+  .courses {
+    &__wrapper {
+      margin-top: 10px;
     }
-    :first-child {
-      margin-bottom: 20px;
+    &__projects_description {
+      width: 45%;
+      padding-left: 5px;
+      font-size: 14px;
+      span {
+        font-size: 15px;
+      }
     }
   }
 }
 
 @media (max-width: 575px) {
-  .courses__section__wrapper {
-    margin-top: 30px;
-    flex-wrap: wrap;
-  }
-  .courses__section__projects_description {
-    margin-top: 30px;
-    width: 100%;
-    padding-left: 0;
-    line-height: 14px;
-    font-size: 13px;
-    span {
-      font-size: 15px;
+  .courses {
+    &__wrapper {
+      margin-top: 30px;
+      flex-wrap: wrap;
     }
-    :first-child {
-      margin-bottom: 15px;
+    &__list {
+      width: 30%;
+      &__track {
+        font-size: 13px;
+      }
+    }
+    &__projects_wrapper {
+      width: 70%;
+      padding: 0;
+      &__track {
+        font-size: 13px;
+      }
+    }
+    &__projects_description {
+      margin-top: 30px;
+      width: 100%;
+      padding: 0 20px;
+      line-height: 14px;
+      font-size: 13px;
+      &__track {
+        font-size: 13px;
+      }
+      span {
+        font-size: 15px;
+      }
+      :first-child {
+        margin-bottom: 15px;
+      }
     }
   }
 }

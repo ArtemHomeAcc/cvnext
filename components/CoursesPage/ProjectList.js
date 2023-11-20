@@ -28,7 +28,7 @@ const ProjectList = () => {
   const elements = renderProjectList(filteredPR);
 
   return (
-    <div className={classes.courses__section__projects}>
+    <div className={classes.courses__section__works}>
       <div
         className={classes.skeleton}
         style={

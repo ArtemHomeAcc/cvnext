@@ -6,14 +6,71 @@
   position: relative;
 }
 
+.experience {
+  width: 25%;
+  &__track {
+    color: grey;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.description {
+  display: flex;
+  width: 75%;
+  min-height: 130px;
+  height: fit-content;
+  justify-content: space-between;
+  &__track {
+    color: grey;
+    margin-bottom: 70px;
+    text-align: center;
+  }
+  &__position {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    div {
+      width: 90%;
+    }
+  }
+  &__achievements {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    div {
+      width: 90%;
+    }
+    &__track {
+      color: grey;
+
+      margin-bottom: 70px;
+      text-align: center;
+    }
+  }
+}
+
+.study {
+  min-height: 40px;
+}
+
+.study__skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.education__achievements__track {
+  display: none;
+}
+
 .skeleton {
   animation: skeleton-loading 1s linear infinite alternate;
-  height: 100%;
-  width: 55%;
-  position: absolute;
-  left: 30%;
-  top: 8%;
+  height: 30px;
   border-radius: 10px;
+  transform: translateY(-100%);
 }
 @keyframes skeleton-loading {
   0% {
@@ -29,10 +86,6 @@
   .study__section__wrapper {
     margin-top: 40px;
   }
-
-  .skeleton {
-    width: 68%;
-  }
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
@@ -43,6 +96,26 @@
     height: fit-content;
     margin-top: 30px;
   }
+
+  .experience {
+    width: 30%;
+    &__track {
+      color: grey;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  .description {
+    width: 70%;
+    &__position {
+      width: 60%;
+      padding: 0;
+    }
+    &__achievements {
+      width: 40%;
+      padding: 0;
+    }
+  }
 }
 
 @media (max-width: 575px) {
@@ -52,5 +125,60 @@
     flex-direction: column;
     height: fit-content;
     font-size: 13px;
+  }
+
+  .experience {
+    width: 100%;
+    font-size: 15px;
+    &__track {
+      display: none;
+    }
+  }
+  .description {
+    width: 100%;
+    height: fit-content;
+    justify-content: flex-start;
+    flex-direction: column;
+    &__track {
+      margin-bottom: 20px;
+      margin-top: 30px;
+      text-align: left;
+    }
+    &__position {
+      width: 100%;
+      max-height: fit-content;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      div {
+        width: 80%;
+      }
+    }
+    &__achievements {
+      width: 100%;
+      max-height: fit-content;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      div {
+        width: 60%;
+      }
+      &__track {
+        margin-bottom: 20px;
+        margin-top: 30px;
+        text-align: left;
+      }
+    }
+  }
+  .skeleton {
+    transform: none;
+  }
+
+  .education__achievements__track {
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    text-align: left;
+    color: grey;
   }
 }

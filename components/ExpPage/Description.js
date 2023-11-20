@@ -1,13 +1,11 @@
-import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import classes from './css/expPage.module.scss';
 
 const Description = ({ active, jobInfo }) => {
-  const t = useTranslations('ABOUT');
   const router = useRouter();
   const { locale } = router;
 
-  const roleDescription = jobInfo.map((item) => {
+  const posDescription = jobInfo.map((item) => {
     const { id, rise } = item;
 
     const languageInformationDisplay = locale === item.uk.language ? item.uk : item.en;
@@ -24,7 +22,6 @@ const Description = ({ active, jobInfo }) => {
     ));
     return (
       <div className={classes.job__section__possition_descr} key={id} style={workStyle}>
-        <div className={classes.descr__track}>{t('EXPERIENCE_DESCRIPTION')}</div>
         <h2>
           {terms}
           <br />
@@ -48,37 +45,7 @@ const Description = ({ active, jobInfo }) => {
     );
   });
 
-  const roleAchievements = jobInfo.map((item) => {
-    const { rise } = item;
-
-    const languageInformationDisplay = locale === item.uk.language ? item.uk : item.en;
-
-    const workStyle = {
-      display: rise && active ? 'block' : 'none',
-    };
-
-    const viewAchivments = languageInformationDisplay.achievements.map((item) => (
-      <li key={item.id}>{item.achiev}</li>
-    ));
-
-    return (
-      <div
-        key={languageInformationDisplay.id}
-        className={classes.job__section__achiev}
-        style={workStyle}
-      >
-        <div className={classes.achievements__track}>{t('EXPERIENCE_ACHIEVEMENTS')}</div>
-        <ul>{viewAchivments}</ul>
-      </div>
-    );
-  });
-
-  return (
-    <>
-      {roleDescription}
-      {roleAchievements}
-    </>
-  );
+  return <>{posDescription}</>;
 };
 
 export default Description;

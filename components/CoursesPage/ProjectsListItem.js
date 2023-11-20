@@ -28,12 +28,12 @@ const ProjectsListItem = ({ _id, image, name }) => {
 
   return (
     <div
-      className={classes.courses__section__projects_item}
+      className={classes.courses__section__works_item}
       style={projectsToShow}
       onClick={() => dispatch(activeProject(name))}
       key={_id}
     >
-      <div className={classes.courses__section__projects_wrapper}>
+      <div className={classes.courses__section__works_wrapper}>
         <Image
           src={image}
           objectFit={'cover'}

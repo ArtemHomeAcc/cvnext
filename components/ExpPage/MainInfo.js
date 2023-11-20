@@ -25,11 +25,6 @@ const MainInfo = () => {
           {t('INTERESTS')}
         </div>
       </div>
-      <div className={classes.main__info__headers__wrapper}>
-        <div className={classes.expirience__track}>{t('EXPERIENCE_HEADER')}</div>
-        <div className={classes.descr__track}>{t('EXPERIENCE_DESCRIPTION')}</div>
-        <div className={classes.achievements__track}>{t('EXPERIENCE_ACHIEVEMENTS')}</div>
-      </div>
     </>
   );
 };

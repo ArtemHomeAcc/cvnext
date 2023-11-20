@@ -1,3 +1,5 @@
+import { useTranslations } from 'next-intl';
+
 import { wrapper } from '@/store';
 import mongoConnect from '@/services/mongo';
 import { getAllCourses } from '@/models/courses.model';
@@ -14,13 +16,24 @@ import { fulfilledFilters } from '@/store/slice/CourseFilterSlice';
 import classes from './courses.module.scss';
 
 function Courses() {
+  const t = useTranslations('ABOUT');
+
   return (
     <div>
       <MainInfo />
-      <div className={classes.courses__section__wrapper}>
-        <CourseFilters />
-        <ProjectList />
-        <div className={classes.courses__section__projects_description}>
+      <div className={classes.courses__wrapper}>
+        <div className={classes.courses__list}>
+          <div className={classes.courses__list__track}>{t('COURSES')} </div>
+          <CourseFilters />
+        </div>
+        <div className={classes.courses__projects_wrapper}>
+          <div className={classes.courses__projects_wrapper__track}>{t('PORTFOLIO')}</div>
+          <ProjectList />
+        </div>
+        <div className={classes.courses__projects_description}>
+          <div className={classes.courses__projects_description__track}>
+            {t('COURSE_DESCR')}
+          </div>
           <ProjectDescription />
           <CourseDescription />
         </div>
