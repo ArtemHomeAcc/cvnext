@@ -32,7 +32,7 @@ const DataForJob = () => {
             id: 'vitam_en_achiev_2',
             achiev: '-All target client were satisfied about our professional service;',
           },
-          { id: 'vitam_en_achiev_3', dutie: '-Developed the operational department;' },
+          { id: 'vitam_en_achiev_3', achiev: '-Developed the operational department;' },
           {
             id: 'vitam_en_achiev_4',
             achiev: '-A clear system was organized, according to which the company works;',
@@ -71,7 +71,7 @@ const DataForJob = () => {
             achiev:
               '-Не було втрачено жодного цільового клієнта (неодноразово отримували схвальні відгуки про нашу професійну роботу);',
           },
-          { id: 'vitam_ua_achiev_3', dutie: '-Розбудовав оперативний відділ;' },
+          { id: 'vitam_ua_achiev_3', achiev: '-Розбудовав оперативний відділ;' },
           {
             id: 'vitam_ua_achiev_4',
             achiev: '-Побудував зрозумілу систему за якої працювала команда;',
@@ -218,6 +218,7 @@ const DataForJob = () => {
   const onToggleRise = (id) => {
     setJobInfo((jobInfo) =>
       jobInfo.map((item) => {
+        console.log(item);
         item.rise = false;
         if (item.id === id) {
           item.rise = true;
