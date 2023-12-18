@@ -26,11 +26,11 @@ const DataForJob = () => {
         achievements: [
           {
             id: 'vitam_en_achiev_1',
-            achiev: '-Successfully entered the highly competitive market secured positions;',
+            achiev: '-Successfully entered the highly competitive market and secured positions;',
           },
           {
             id: 'vitam_en_achiev_2',
-            achiev: '-All target client were satisfied about our professional service;',
+            achiev: '-All target clients were satisfied with our professional service;',
           },
           { id: 'vitam_en_achiev_3', achiev: '-Developed the operational department;' },
           {
