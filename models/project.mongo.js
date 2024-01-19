@@ -16,7 +16,7 @@ const projectSchema = new mongoose.Schema({
         require: true,
       },
     },
-    ua: {
+    uk: {
       language: {
         type: String,
         require: true,

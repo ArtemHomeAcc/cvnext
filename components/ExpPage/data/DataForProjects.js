@@ -17,7 +17,7 @@ const DataForProjects = () => {
             id: 'vitam_en_achiev_2',
             achiev: '-Experience with CSS animation;',
           },
-          { id: 'vitam_en_achiev_3', achiev: '-Better understanding of Object.entiers features;' },
+          { id: 'vitam_en_achiev_3', achiev: '-Better understanding of Object.entiers method;' },
           {
             id: 'vitam_en_achiev_4',
             achiev: '-Multi-Language adaptation practice;',

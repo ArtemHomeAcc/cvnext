@@ -5,7 +5,7 @@ import {
   httpUpdateCourse,
 } from '../../../helpers/courses.controller/course.controller';
 
-await mongoConnect(); 
+await mongoConnect();
 
 async function handler(req, res) {
   if (req.method === 'POST') {

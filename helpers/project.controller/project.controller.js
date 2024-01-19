@@ -1,16 +1,12 @@
-import {
-  addNewProject,
-  getAllProjects,
-  updateProject,
-} from '../../models/project.model';
+import { addNewProject, getAllProjects, updateProject } from '../../models/project.model';
 
 export function checkData(data, res) {
   if (
     !data.name ||
     !data.description.en.language ||
     !data.description.en.descr ||
-    !data.description.ua.language ||
-    !data.description.ua.descr ||
+    !data.description.uk.language ||
+    !data.description.uk.descr ||
     !data.course ||
     !data.githubLink ||
     !data.gDiskLink
@@ -23,7 +19,6 @@ export function checkData(data, res) {
 
 export async function httpAddNewProject(req, res) {
   const project = req.body;
-
   checkData(project, res);
 
   await addNewProject(project)

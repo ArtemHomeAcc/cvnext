@@ -7,7 +7,9 @@ export async function addNewProject(project) {
 
   if (!existingProject) {
     const newProject = projectDB({ ...project });
+    console.log(newProject);
     const savedProject = await newProject.save();
+    console.log(savedProject);
     return savedProject;
   } else {
     return 'The project is existing. Please rename';
